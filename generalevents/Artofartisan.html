@@ -38,7 +38,8 @@ body{
   top:0;
   left:0;
   width:100%;
-  height:120px;
+height: auto;
+min-height: 120px; /* desktop only */
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -280,6 +281,46 @@ background: linear-gradient(
   .grid{grid-template-columns:1fr}
   .meta{grid-template-columns:repeat(2,1fr)}
 }
+
+  @media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    height: 70px;
+    padding: 0 12px;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* left | center | right */
+    align-items: center;
+  }
+
+  /* LEFT LOGO */
+  .nav-left img {
+    height: 40px;
+    width: auto;
+  }
+
+  /* CENTER LOGO */
+  .nav-center {
+    position: static;     /* ⬅ remove absolute */
+    transform: none;
+    text-align: center;
+  }
+
+  .nav-center img {
+    height: 48px;
+    width: auto;
+  }
+
+  /* RIGHT BUTTON */
+  .nav-right a {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    margin: 0;            /* ⬅ remove top margin */
+    border-radius: 10px;
+  }
+
+}
+
 </style>
 </head>
 
@@ -394,3 +435,4 @@ background: linear-gradient(
 
 </body>
 </html>
+
