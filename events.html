@@ -182,6 +182,73 @@ body{
   inset:0;
   z-index:-1;
 }
+  /* ================= MOBILE NAVBAR FIX ================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    height: 72px;                 /* ⬅ reduce height */
+    padding: 0 12px;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* left | center | right */
+    align-items: center;
+  }
+
+  /* LEFT LOGO */
+  .bcm-logo {
+    height: 40px;                 /* ⬅ smaller */
+    width: auto;
+  }
+
+  /* CENTER LOGO */
+  .nav-center {
+    position: static;
+    transform: none;
+    justify-self: center;
+  }
+
+  .carnival-logo {
+    height: 44px;                 /* ⬅ reduced */
+    max-width: 120px;
+  }
+
+  /* RIGHT BUTTON */
+  .nav-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+  }
+
+  .home-btn {
+    padding: 5px 12px;            /* ⬅ compact */
+    font-size: 0.75rem;           /* ⬅ smaller text */
+    border-radius: 10px;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+
+  .header {
+    padding: 110px 16px 40px;   /* ⬅ reduce top spacing */
+  }
+
+  .header h1 {
+    font-size: 2.4rem;          /* ⬅ smaller title */
+    letter-spacing: 3px;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  .divider {
+    width: 90px;
+    height: 3px;
+    margin-top: 20px;
+  }
+}
+
 </style>
 </head>
 
@@ -246,4 +313,5 @@ anim();
 </script>
 
 </body>
+
 </html>
