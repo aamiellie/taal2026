@@ -1344,7 +1344,40 @@ body {
     text-align: left !important;
   }
 }
-  
+
+  /* ================= CONTACT FORCE LEFT ================= */
+.contact-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;   /* ⬅ anchor to LEFT */
+}
+
+.contact-left {
+  text-align: left;
+  max-width: 420px;
+  margin-left: 0;
+  padding-left: 24px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-wrap {
+    justify-content: flex-start;
+  }
+
+  .contact-left {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left !important;
+  }
+
+  .contact-left h2,
+  .contact-left p {
+    text-align: left !important;
+  }
+}
+
 
 
 
@@ -1450,7 +1483,8 @@ body {
 
 </section>
 
-  <section id="contact">
+<section id="contact" class="contact-wrap">
+  <div class="contact-left">
     <h2>Contact Us</h2>
 <p>
   📧 <strong>Taal</strong><br><br>
@@ -1476,7 +1510,8 @@ body {
   📸 <strong>Instagram:</strong> taal_2k26
 </p>
 
-  </section>
+  </div>
+</section>
 
 
 <img src="dj.png"  class="left">
@@ -1681,6 +1716,7 @@ function closePage() {
 </body>
 
 </html>
+
 
 
 
